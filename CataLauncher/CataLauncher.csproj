@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2BC38144-622B-4E9A-9A63-FFF0E93BF5B6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CataLauncher</RootNamespace>
+    <AssemblyName>Launcher</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CataLauncher.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CataButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CataButton.Designer.cs">
+      <DependentUpon>CataButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Credits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Credits.Designer.cs">
+      <DependentUpon>Credits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DownloadBar.Designer.cs">
+      <DependentUpon>DownloadBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DownloadProgressBar.Designer.cs">
+      <DependentUpon>DownloadProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenuBar.Designer.cs">
+      <DependentUpon>MenuBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WoW.cs" />
+    <EmbeddedResource Include="CataButton.resx">
+      <DependentUpon>CataButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Credits.resx">
+      <DependentUpon>Credits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadBar.resx">
+      <DependentUpon>DownloadBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadProgressBar.resx">
+      <DependentUpon>DownloadProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBar.resx">
+      <DependentUpon>MenuBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LauncherMenuBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinimizeButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LauncherOuter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitButton-NoHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinimizeButton-NoHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play-No-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayButtonPress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitButtonPress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinimizeButtonPress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deathwing2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Worgen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayButtonDisabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CataLauncher.ico" />
+    <None Include="Resources\dbar_playable.png" />
+    <None Include="Resources\yellow_progressbar.png" />
+    <None Include="Resources\red_progressbar.png" />
+    <None Include="Resources\dbar_setup.png" />
+    <None Include="Resources\dbar_available.png" />
+    <None Include="Resources\SmallButton.png" />
+    <None Include="Resources\DownloadProgressBarGreen.png" />
+    <None Include="Resources\WebsiteButton.png" />
+    <None Include="Resources\VoteButton.png" />
+    <None Include="Resources\DonateButton.png" />
+    <None Include="Resources\ForumsButton.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
